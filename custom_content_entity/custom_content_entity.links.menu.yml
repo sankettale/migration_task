@@ -1,0 +1,10 @@
+entity.migration.settings:
+  title: Migration
+  description: Configure a Migration entity type
+  route_name:  entity.migration.settings
+  parent: system.admin_structure
+entity.migration.collection:
+  title: Migrations
+  description: List of migrations
+  route_name: entity.migration.collection
+  parent: system.admin_content

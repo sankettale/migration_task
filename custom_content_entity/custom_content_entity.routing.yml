@@ -1,0 +1,7 @@
+entity.migration.settings:
+  path: 'admin/structure/migration'
+  defaults:
+    _form: '\Drupal\custom_content_entity\Form\MigrationSettingsForm'
+    _title: 'Migration'
+  requirements:
+    _permission: 'administer migration'

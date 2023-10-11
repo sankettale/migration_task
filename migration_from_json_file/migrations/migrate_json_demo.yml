@@ -1,0 +1,44 @@
+id: migrate_json_demo
+label: Import content from JSON
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/migration_from_json_file/files/cities.json
+  fields:
+    - name: id
+      label: field_id
+      selector: _id
+    - name: city
+      label: field_city
+      selector: city
+    - name: loc
+      label: field_loc
+      selector: loc
+    - name: pop
+      label: field_pop
+      selector: pop
+    - name: state
+      label: field_state
+      selector: state
+  ids:
+    id:
+      type: int
+process:
+  field_id: field_id
+  field_city: field_city
+  field_loc: field_loc
+  field_pop: field_pop
+  field_state: field_state
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: Migration
+  destination:
+    plugin: "entity:node"
+
+
+
